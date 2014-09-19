@@ -4,7 +4,9 @@ This uses the `registry` as a base and adds basic auth via Nginx. Note that you 
 # Usage
 To run a private registry,
 
-`docker run -i -t colegleason/docker-private-registry`
+`docker run -i -t builtdock/docker-private-registry-etcd`
+
+'docker run -i -t -p 443 -v /path/to/cert_and_key:/opt/ssl -e SSL_CERT_PATH=/opt/ssl/cert.crt -e SSL_CERT_KEY_PATH=/opt/ssl/cert.key builtdock/docker-private-registry-etcd'
 
 # Management
 To add users, you must add the htpasswd hash to etcd like this:
