@@ -1,3 +1,7 @@
-box: wercker/default
-
-
+box: wercker-labs/docker
+build:
+  steps:
+    - script:
+        name: docker version
+        code: |
+          docker -v
